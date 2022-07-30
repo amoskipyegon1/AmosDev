@@ -1,31 +1,51 @@
 <template>
-    <div class="w-full h-full gap-8 pr-2 sm:pr-6 lg:pr-20 flex flex-row justify-end items-center">
-        <div class="essential-links flex flex-row gap-6 sm:gap-8">
-            <div class="link">
-                <div class="i-mdi-lightbulb" />
-                <span>Projects</span>
-                <div class="drop-down">
-                    <span>Projects</span>
+    <div class="w-full h-full gap-8 sm:pl-4 pr-2 sm:pr-6 lg:pr-20 flex flex-row justify-between items-center">
+        <div class="logo h-full flex items-center">
+            <img src="@/assets/img/signature.png" alt="i" class="w-[6rem] sm:w-[8rem] h-[3rem]">
+        </div>
+        <div class="right flex flex-row items-center gap-6 sm:gap-8">
+            <div class="essential-links flex flex-row items-center gap-6 sm:gap-8">
+                <div class="link">
+                    <div class="i-mdi-lightbulb" />
+                    <h4>Projects</h4>
+                    <div class="drop-down-link">
+                        <span>Projects</span>
+                    </div>
+                </div>
+                <div class="link">
+                    <div class="i-mdi-post" />
+                    <h4>Notes</h4>
+                    <div class="drop-down-link">
+                        <span>Notes</span>
+                    </div>
+                </div>
+                <div class="link">
+                    <div class="i-mdi-monitor-screenshot" />
+                    <h4>Demos</h4>
+                    <div class="drop-down-link">
+                        <span>Demos</span>
+                    </div>
                 </div>
             </div>
-            <div class="link">
-                <div class="i-mdi-post" />
-                <span>Notes</span>
-            </div>
-            <div class="link">
-                <div class="i-mdi-monitor-screenshot" />
-                <span>Demos</span>
-            </div>
-        </div>
-        <div class="other-links flex flex-row items-center gap-6 sm:gap-8">
-            <div class="link">
-                <div class="i-mdi-github" />
-            </div>
-            <div class="link">
-                <div class="i-mdi-twitter" />
-            </div>
-            <div class="link">
-                <div class="i-mdi-linkedin" />
+            <div class="other-links flex flex-row items-center gap-6 sm:gap-8">
+                <a href="https://github.com/Amos-Ditto" class="link">
+                    <div class="i-mdi-github" />
+                    <div class="drop-down-link">
+                        <span>github</span>
+                    </div>
+                </a>
+                <a href="https://twitter.com/_ditto1" class="link">
+                    <div class="i-mdi-twitter" />
+                    <div class="drop-down-link">
+                        <span>twitter</span>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/amos-kipyegon-584435224" class="link">
+                    <div class="i-mdi-linkedin" />
+                    <div class="drop-down-link">
+                        <span>linkedin</span>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
@@ -34,25 +54,34 @@
 <style scoped>
 
 .essential-links .link {
-    @apply flex items-center flex-row font-normal tracking-wider hover:text-slate-200 cursor-pointer;
+    @apply relative flex items-center justify-center font-normal tracking-wider hover:text-slate-200 cursor-pointer;
 }
 .essential-links .link div:first-child {
     @apply block sm:hidden text-xl;
 }
-.essential-links .link span {
+.essential-links .link h4 {
     @apply hidden sm:block;
     font-family: serif;
 }
+
+.essential-links .link .drop-down-link {
+    @apply px-3 py-2 bg-slate-800 border border-slate-700 rounded;
+    @apply absolute bottom-0 translate-y-[150%] opacity-0 invisible text-sm font-serif tracking-wide;
+    transition: visibility 300ms ease , opacity 300ms ease;
+}
+.essential-links .link:hover .drop-down-link {
+    @apply opacity-100 visible sm:invisible;
+}
 .other-links .link {
-    @apply text-xl cursor-pointer hover:text-slate-200;
+    @apply relative text-xl cursor-pointer hover:text-slate-200 flex items-center justify-center;
 }
-.drop-down {
-    @apply sm:hidden absolute bg-neutral-600 text-sm min-w-[4rem] h-[2rem] px-3 py-2 rounded translate-y-[110%];
+
+.other-links .link .drop-down-link {
+    @apply invisible absolute bottom-0 opacity-0 translate-y-[150%] rounded  px-3 py-2 text-sm bg-slate-800 text-slate-200;
+    @apply tracking-wide border border-slate-700 font-serif;
+    transition: visibility 300ms ease , opacity 300ms ease;
 }
-.drop-down span {
-    @apply text-base text-white;
-}
-.essential-links .link:hover .drop-down {
-    @apply visible;
+.other-links .link:hover  .drop-down-link {
+    @apply visible opacity-100;
 }
 </style>
