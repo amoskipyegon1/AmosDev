@@ -57,6 +57,10 @@ body {
   margin: 0%;
   padding: 0%;
   @apply antialiased text-slate-400 bg-slate-900;
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
 }
 
 .app {
