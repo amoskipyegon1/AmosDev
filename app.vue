@@ -64,12 +64,9 @@ body {
 }
 
 .app {
-  background-image: url('@/assets/img/hero-dark@90.a7a063e8f9d179fbd72b0b735c5797b7.jpg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
   @apply bg-slate-900;
 }
 .page-bg {
-  @apply bg-slate-900 opacity-60;
+  @apply bg-slate-900 opacity-80;
 }
 </style>

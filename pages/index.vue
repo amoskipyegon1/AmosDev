@@ -6,9 +6,28 @@
             </div>
             <article class="w-full">
                 <p>
-                    Hey, I am Amos Kipyegon, a fanatical backend developer. Currently working on open sources & 
+                    Hey, I am Amos Kipyegon, a fanatical software engineer specializing in backend developement (and also frontend development). Currently working on open sources & 
                     learning more tech skills.
                 </p>
+                <div class="tech-stacks w-full py-2 flex flex-col gap-3">
+                    <h3>Here are a few technologies I’ve been working with recently:</h3>
+                    <div class="languages w-[90%] sm:w-[80%] flex-col flex gap-2 px-4">
+                        <ul class="w-full grid grid-cols-3 gap-y-3">
+                            <li>
+                                <div class="i-mdi-language-python icon"></div>
+                                <p>Python</p>
+                            </li>
+                            <li>
+                                <div class="i-mdi-language-java icon"></div>
+                                <p>Java</p>
+                            </li>
+                            <li>
+                                <div class="i-mdi-language-javascript icon"></div>
+                                <p>JavaScript</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="social-media leading-10 w-full pt-8">
                     <p>
                         Find me on 
@@ -18,7 +37,7 @@
                     </p>
                     <p>
                         Mail me at
-                        <a href="https://amosditto@gmail.com">amosditto@gmail.com</a>
+                        <a href="mailto:amosditto@gmail.com">amosditto@gmail.com</a>
                     </p>
                 </div>
             </article>
@@ -33,9 +52,19 @@
 }
 article {
     font-family: Arial;
-    @apply leading-7 flex flex-col gap-6 text-base;
+    @apply leading-7 flex flex-col gap-6 text-base text-slate-400;
 }
 .social-media p a {
     @apply underline text-lg decoration-slate-600 text-slate-300;
+    @apply hover:text-slate-100;
+}
+.tech-stacks ul li {
+    @apply flex flex-row items-center gap-2 text-sm tracking-wide;
+}
+.tech-stacks ul li .icon {
+    @apply text-3xl;
+}
+.tech-stacks .languages {
+    transition: width 300ms ease;
 }
 </style>

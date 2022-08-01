@@ -1,17 +1,17 @@
 <template>
     <div class="w-full h-full gap-8 sm:pl-4 pr-2 sm:pr-6 lg:pr-20 flex flex-row justify-between items-center">
-        <div class="logo h-full flex items-center">
+        <NuxtLink to="/" class="logo h-full flex items-center">
             <img src="@/assets/img/signature.png" alt="i" class="w-[6rem] sm:w-[8rem] h-[3rem]">
-        </div>
+        </NuxtLink>
         <div class="right flex flex-row items-center gap-6 sm:gap-8">
-            <div class="essential-links flex flex-row items-center gap-6 sm:gap-8">
-                <div class="link">
+            <div class="essential-links flex flex-row items-center gap-6 sm:gap-8 text-slate-300">
+                <NuxtLink to="/projects" class="link">
                     <div class="i-mdi-lightbulb" />
                     <h4>Projects</h4>
                     <div class="drop-down-link">
                         <span>Projects</span>
                     </div>
-                </div>
+                </NuxtLink>
                 <div class="link">
                     <div class="i-mdi-post" />
                     <h4>Notes</h4>
@@ -53,8 +53,13 @@
 
 <style scoped>
 
+.router-link-active.link {
+    @apply text-slate-100;
+}
+
 .essential-links .link {
-    @apply relative flex items-center justify-center font-normal tracking-wider hover:text-slate-200 cursor-pointer;
+    @apply relative flex items-center justify-center font-normal tracking-wider cursor-pointer;
+    @apply hover:text-slate-100;
 }
 .essential-links .link div:first-child {
     @apply block sm:hidden text-xl;
@@ -73,7 +78,7 @@
     @apply opacity-100 visible sm:invisible;
 }
 .other-links .link {
-    @apply relative text-xl cursor-pointer hover:text-slate-200 flex items-center justify-center;
+    @apply relative text-xl cursor-pointer text-slate-300 hover:text-slate-100 flex items-center justify-center;
 }
 
 .other-links .link .drop-down-link {
