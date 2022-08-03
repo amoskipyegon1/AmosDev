@@ -31,13 +31,13 @@
                 <div class="social-media leading-10 w-full pt-8">
                     <p>
                         Find me on 
-                        <a href="https://github.com/Amos-Ditto">GitHub</a>,
-                        <a href="https://twitter.com/_ditto1">Twitter</a>,
-                        <a href="https://www.linkedin.com/in/amos-kipyegon-584435224">Linkedin</a>
+                        <NuxtLink to="https://github.com/Amos-Ditto" target="_blank">GitHub</NuxtLink>,
+                        <NuxtLink to="https://twitter.com/_ditto1" target="_blank">Twitter</NuxtLink>,
+                        <NuxtLink to="https://www.linkedin.com/in/amos-kipyegon-584435224" target="_blank">Linkedin</NuxtLink>
                     </p>
                     <p>
                         Mail me at
-                        <a href="mailto:amosditto@gmail.com">amosditto@gmail.com</a>
+                        <NuxtLink to="mailto:amosditto@gmail.com" target="_blank">amosditto@gmail.com</NuxtLink>
                     </p>
                 </div>
             </article>

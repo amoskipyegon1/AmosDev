@@ -28,24 +28,24 @@
                 </div>
             </div>
             <div class="other-links flex flex-row items-center gap-6 sm:gap-8">
-                <a href="https://github.com/Amos-Ditto" class="link">
+                <NuxtLink to="https://github.com/Amos-Ditto" class="link" target="_blank">
                     <div class="i-mdi-github" />
                     <div class="drop-down-link">
                         <span>github</span>
                     </div>
-                </a>
-                <a href="https://twitter.com/_ditto1" class="link">
+                </NuxtLink>
+                <NuxtLink to="https://twitter.com/_ditto1" class="link" target="_blank">
                     <div class="i-mdi-twitter" />
                     <div class="drop-down-link">
                         <span>twitter</span>
                     </div>
-                </a>
-                <a href="https://www.linkedin.com/in/amos-kipyegon-584435224" class="link">
+                </NuxtLink>
+                <NuxtLink to="https://www.linkedin.com/in/amos-kipyegon-584435224" class="link" target="_blank">
                     <div class="i-mdi-linkedin" />
                     <div class="drop-down-link">
                         <span>linkedin</span>
                     </div>
-                </a>
+                </NuxtLink>
             </div>
         </div>
     </div>
