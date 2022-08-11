@@ -9,7 +9,7 @@
             <slot></slot>
         </main>
         <footer class="flex justify-center items-center pt-6">
-            <div class="footer-container w-[90%] sm:w-[500px] md:w-[500px] lg:w-[600px] flex items-start flex-col gap-2">
+            <div class="footer-container w-[90%] sm:w-[500px] md:w-[600px] lg:w-[700px] flex items-start flex-col gap-2">
                 <h3>Designed & Built by Amos Kipyegon</h3>
                 <p class="text-slate-500 text-sm">@2022 - present</p>
             </div>
