@@ -1,11 +1,22 @@
-import { defineNuxtConfig } from 'nuxt'
-import presetIcons from '@unocss/preset-icons';
+import presetIcons from "@unocss/preset-icons";
 
 export default defineNuxtConfig({
-    buildModules: ['@nuxtjs/tailwindcss', '@unocss/nuxt'],
-    unocss: {
-        icons: true,
-        presets: [presetIcons({})],
-    }
-
-})
+	css: ["~/assets/css/tailwind.css"],
+	buildModules: ["@nuxtjs/tailwindcss", "@unocss/nuxt", "@nuxtjs/color-mode"],
+	colorMode: {
+		classSuffix: "",
+	},
+	app: {
+		head: {
+			charset: "utf-16",
+			viewport: "width=500, initial-scale=1",
+			title: "Amos Dev",
+			meta: [{ name: "description", content: "Trying to showcase my programming skills." }],
+		},
+		pageTransition: { name: "page", mode: "out-in" },
+	},
+	unocss: {
+		icons: true,
+		presets: [presetIcons({})],
+	},
+});
