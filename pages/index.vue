@@ -1,6 +1,30 @@
+<script setup lang="ts">
+const navref = ref<Element>(null);
+const navloader = ref<boolean>(false);
+
+onMounted(() => {
+	const itemObs = new IntersectionObserver(
+		(entry) => {
+			if (entry[0].isIntersecting) {
+				navloader.value = true;
+				itemObs.unobserve(entry[0].target);
+			}
+		},
+		{
+			threshold: 0.25,
+		}
+	);
+
+	itemObs.observe(navref.value);
+});
+</script>
 <template>
 	<section class="w-full flex flex-col py-6 xl:max-w-[1240px] gap-y-10">
-		<div class="navigation card-tate py-3 rounded-xl px-4 flex flex-row justify-between">
+		<div
+			class="navigation card-tate py-3 rounded-xl px-4 flex flex-row justify-between transition duration-1000"
+			ref="navref"
+			:class="navloader ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'"
+		>
 			<div class="links flex flex-row items-center gap-x-8">
 				<small
 					class="capitalize hidden sm:block tracking-normal text-[15px] font-semibold hover:text-tomato duration-200 transition cursor-pointer"
@@ -18,38 +42,16 @@
 					class="capitalize hidden sm:block tracking-normal text-[15px] font-semibold hover:text-tomato duration-200 transition cursor-pointer"
 					>projects</small
 				>
-				<small
-					class="capitalize hidden sm:block tracking-normal text-[15px] font-semibold hover:text-tomato duration-200 transition cursor-pointer"
-					>email me</small
-				>
 			</div>
 			<div class="custom-links flex flex-row items-center">
-				<button class="btn hover:opacity-80">
+				<NuxtLink to="https://github.com/Amos-Ditto" target="_blank" class="btn hover:opacity-80">
 					<!-- <UtilitiesGithubIcon :bg="'w-6 h-6 bg-gray-50 rounded-full'" /> -->
 					<span class="text-base capitalize tracking-wide">github →</span>
-				</button>
+				</NuxtLink>
 			</div>
 		</div>
-
-		<div class="hero relative grid grid-cols-1 md:grid-cols-2 z-0">
-			<div class="hero-text z-0 px-0 py-4 flex flex-col gap-y-8">
-				<div class="work-status flex flex-row">
-					<button class="px-1 py-1.5 flex flex-row justify-start items-center gap-x-3 rounded-3xl bg-[#e741421f]">
-						<UtilitiesCheckIcon :bg="'w-6 h-6'" />
-						<small class="text-sm font-semibold capitalize tracking-wide pr-4">available for work</small>
-					</button>
-				</div>
-				<h3 class="text-2xl md:text-5xl font-semibold tracking-wide uppercase">Amos Kipyegon</h3>
-				<div class="brief-about">
-					<p class="text-lg tracking-wide leading-8">
-						Working on solving problems of scale and long term technology.
-						<span class="text-[#e74142] uppercase">Software Engineer</span> who loves Python and JavaScript.
-					</p>
-				</div>
-			</div>
-			<div class="hero-img opacity-5 sm:opacity-20 md:opacity-60 absolute md:relative top-0 right-0 -z-10">
-				<img src="@/assets/Img/profile-rm.png" alt="" class="bg-inherit" />
-			</div>
+		<div class="hero">
+			<HomeHero />
 		</div>
 	</section>
 </template>
