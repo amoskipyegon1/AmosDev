@@ -9,6 +9,7 @@ module.exports = {
 			colors: {
 				dark: "rgb(12 12 13 / 1)",
 				tate: "#130912",
+				tomato: "tomato",
 			},
 		},
 		screens: {
