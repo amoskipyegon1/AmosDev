@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const itemref = ref<Element>(null);
+const itemref = ref<HTMLElement>();
 const elementloader = ref<boolean>(false);
 
 onMounted(() => {
@@ -15,17 +15,17 @@ onMounted(() => {
 		}
 	);
 
-	itemObs.observe(itemref.value);
+	itemObs.observe(itemref.value as Element);
 });
 </script>
 <template>
-	<div class="hero relative grid grid-cols-1 md:grid-cols-2 z-0">
+	<div class="hero relative grid grid-cols-1 md:grid-cols-2 z-0 pt-10 sm:pt-12">
 		<div class="hero-text z-0 px-0 py-4 flex flex-col gap-y-6">
 			<div class="work-status flex flex-row">
 				<button
 					ref="itemref"
 					class="px-1 py-1.5 flex flex-row justify-start items-center gap-x-3 rounded-3xl bg-[#e741421f] transition duration-1000"
-					:class="elementloader ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-2'"
+					:class="elementloader ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 -translate-x-2 scale-50'"
 				>
 					<UtilitiesCheckIcon :bg="'w-6 h-6'" />
 					<small class="text-sm font-semibold capitalize tracking-wide pr-4">available for work</small>
@@ -34,7 +34,7 @@ onMounted(() => {
 			<h3
 				class="pt-2 text-2xl md:text-5xl font-semibold tracking-wide uppercase transition duration-1000"
 				ref="itemref"
-				:class="elementloader ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'"
+				:class="elementloader ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-3 scale-50'"
 			>
 				Amos Kipyegon
 			</h3>
@@ -42,7 +42,7 @@ onMounted(() => {
 				<p
 					class="text-lg tracking-wide leading-8 transition duration-1000"
 					ref="itemref"
-					:class="elementloader ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'"
+					:class="elementloader ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-3 scale-50'"
 				>
 					Working on solving problems of scale and long term technology.
 					<span class="text-[#e74142] uppercase">Software Engineer</span> who loves Python and JavaScript.
@@ -51,7 +51,7 @@ onMounted(() => {
 			<div
 				class="socials flex flex-col gap-y-2 pt-3 transition duration-1000"
 				ref="itemref"
-				:class="elementloader ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'"
+				:class="elementloader ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-3 scale-50'"
 			>
 				<h3 class="text-xl tracking-wide uppercase">my socials</h3>
 				<div class="social-links flex flex-wrap gap-y-2 gap-x-0.5">
@@ -81,11 +81,11 @@ onMounted(() => {
 		</div>
 		<div class="hero-img opacity-5 sm:opacity-20 md:opacity-70 absolute md:relative top-0 right-0 -z-10 flex items-center justify-end">
 			<img
-				src="@/assets/Img/profile-rm.png"
+				src="@/assets/Img/Group.svg"
 				alt=""
 				class="bg-inherit w-auto h-[417px] bg-contain transition duration-1000"
 				ref="itemref"
-				:class="elementloader ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'"
+				:class="elementloader ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-3 scale-50'"
 			/>
 		</div>
 	</div>
