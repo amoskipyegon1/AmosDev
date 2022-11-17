@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const navref = ref<Element>(null);
+const navref = ref<HTMLDivElement>();
 const navloader = ref<boolean>(false);
 
 onMounted(() => {
@@ -15,7 +15,7 @@ onMounted(() => {
 		}
 	);
 
-	itemObs.observe(navref.value);
+	itemObs.observe(navref.value as Element);
 });
 </script>
 <template>
