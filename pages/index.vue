@@ -23,7 +23,7 @@ onMounted(() => {
 		<div
 			class="navigation card-tate py-3 rounded-xl px-4 flex flex-row justify-between transition duration-1000"
 			ref="navref"
-			:class="navloader ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'"
+			:class="navloader ? 'opacity-100' : 'opacity-0'"
 		>
 			<div class="links flex flex-row items-center gap-x-8">
 				<small
@@ -50,8 +50,11 @@ onMounted(() => {
 				</NuxtLink>
 			</div>
 		</div>
-		<div class="hero">
+		<div class="hero min-h-[500px] max-h-[500px]">
 			<HomeHero />
+		</div>
+		<div class="about w-full pt-12">
+			<About />
 		</div>
 	</section>
 </template>
