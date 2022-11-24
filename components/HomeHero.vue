@@ -25,16 +25,16 @@ onMounted(() => {
 				<button
 					ref="itemref"
 					class="px-1 py-1.5 flex flex-row justify-start items-center gap-x-3 rounded-3xl bg-[#e741421f] transition duration-1000"
-					:class="elementloader ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 -translate-x-2 scale-50'"
+					:class="elementloader ? 'opacity-100' : 'opacity-0'"
 				>
 					<UtilitiesCheckIcon :bg="'w-6 h-6'" />
 					<small class="text-sm font-semibold capitalize tracking-wide pr-4">available for work</small>
 				</button>
 			</div>
 			<h3
-				class="pt-2 text-2xl md:text-5xl font-semibold tracking-wide uppercase transition duration-1000"
+				class="pt-2 text-3xl md:text-5xl font-semibold tracking-wide uppercase transition duration-1000"
 				ref="itemref"
-				:class="elementloader ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-3 scale-50'"
+				:class="elementloader ? 'opacity-100' : 'opacity-0'"
 			>
 				Amos Kipyegon
 			</h3>
@@ -42,18 +42,18 @@ onMounted(() => {
 				<p
 					class="text-lg tracking-wide leading-8 transition duration-1000"
 					ref="itemref"
-					:class="elementloader ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-3 scale-50'"
+					:class="elementloader ? 'opacity-100' : 'opacity-0'"
 				>
-					Working on solving problems of scale and long term technology.
-					<span class="text-[#e74142] uppercase">Software Engineer</span> who loves Python and JavaScript.
+					<span class="text-super uppercase">Software Engineer</span> who loves Python and JavaScript. Working on solving problems
+					of scale and long term technology.
 				</p>
 			</div>
 			<div
-				class="socials flex flex-col gap-y-2 pt-3 transition duration-1000"
+				class="socials flex flex-col gap-y-4 pt-3 transition duration-1000"
 				ref="itemref"
-				:class="elementloader ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-3 scale-50'"
+				:class="elementloader ? 'opacity-100' : 'opacity-0'"
 			>
-				<h3 class="text-xl tracking-wide uppercase">my socials</h3>
+				<h3 class="text-xl tracking-wide uppercase">contact me</h3>
 				<div class="social-links flex flex-wrap gap-y-2 gap-x-0.5">
 					<NuxtLink
 						to="https://twitter.com/_ditto1"
@@ -85,7 +85,7 @@ onMounted(() => {
 				alt=""
 				class="bg-inherit w-auto h-[417px] bg-contain transition duration-1000"
 				ref="itemref"
-				:class="elementloader ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-3 scale-50'"
+				:class="elementloader ? 'opacity-100' : 'opacity-0'"
 			/>
 		</div>
 	</div>

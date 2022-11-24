@@ -10,6 +10,7 @@ module.exports = {
 				dark: "rgb(12 12 13 / 1)",
 				tate: "#130912",
 				tomato: "tomato",
+				super: "#e74142",
 			},
 		},
 		screens: {
