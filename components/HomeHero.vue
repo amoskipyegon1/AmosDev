@@ -27,8 +27,8 @@ onMounted(() => {
 					class="px-1 py-1.5 flex flex-row justify-start items-center gap-x-3 rounded-3xl bg-[#e741421f] transition duration-1000"
 					:class="elementloader ? 'opacity-100' : 'opacity-0'"
 				>
-					<UtilitiesCheckIcon :bg="'w-6 h-6'" />
-					<small class="text-sm font-semibold capitalize tracking-wide pr-4">available for work</small>
+					<UtilitiesCheckIcon :bg="'w-5 h-5'" />
+					<small class="text-xs font-light capitalize tracking-wider pr-4">available for work</small>
 				</button>
 			</div>
 			<h3
@@ -54,32 +54,14 @@ onMounted(() => {
 				:class="elementloader ? 'opacity-100' : 'opacity-0'"
 			>
 				<h3 class="text-xl tracking-wide uppercase">contact me</h3>
-				<div class="social-links flex flex-wrap gap-y-2 gap-x-0.5">
-					<NuxtLink
-						to="https://twitter.com/_ditto1"
-						target="_blank"
-						class="text-xs py-1.5 px-3 bg-[steelblue] text-gray-50 font-serif font-bold uppercase opacity-90 hover:opacity-80 tracking-wide transition duration-200"
-					>
-						twitter
-					</NuxtLink>
-					<NuxtLink
-						to="https://wa.link/2tzphn"
-						target="_blank"
-						class="text-xs py-1.5 px-3 bg-emerald-600 text-gray-50 font-serif font-bold uppercase opacity-90 hover:opacity-80 tracking-wide transition duration-200"
-					>
-						whatsapp
-					</NuxtLink>
-					<NuxtLink
-						to="https://www.linkedin.com/in/amos-kipyegon/"
-						target="_blank"
-						class="text-xs py-1.5 px-3 bg-[steelblue] text-gray-50 font-serif font-bold uppercase opacity-90 hover:opacity-80 tracking-wide transition duration-200"
-					>
-						linkedin
-					</NuxtLink>
+				<div class="social-links flex flex-wrap gap-y-2 gap-x-5 w-full">
+					<NuxtLink to="https://twitter.com/_ditto1" target="_blank" class="card-tate"> twitter </NuxtLink>
+					<NuxtLink to="https://wa.link/2tzphn" target="_blank" class="card-tate"> whatsapp </NuxtLink>
+					<NuxtLink to="https://www.linkedin.com/in/amos-kipyegon/" target="_blank" class="card-tate"> linkedIn </NuxtLink>
 				</div>
 			</div>
 		</div>
-		<div class="hero-img opacity-5 sm:opacity-20 md:opacity-70 absolute md:relative top-0 right-0 -z-10 flex items-center justify-end">
+		<!-- <div class="hero-img opacity-5 sm:opacity-20 md:opacity-70 absolute md:relative top-0 right-0 -z-10 flex items-center justify-end">
 			<img
 				src="@/assets/Img/Group.svg"
 				alt=""
@@ -87,6 +69,12 @@ onMounted(() => {
 				ref="itemref"
 				:class="elementloader ? 'opacity-100' : 'opacity-0'"
 			/>
-		</div>
+		</div> -->
 	</div>
 </template>
+
+<style scoped>
+.social-links a {
+	@apply text-sm py-2 px-4 text-gray-50 font-[500] capitalize opacity-90 hover:opacity-60 tracking-wider transition duration-200 ring-1 ring-[#484848] rounded-[20px];
+}
+</style>
