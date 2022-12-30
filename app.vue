@@ -16,6 +16,7 @@ body {
 	-webkit-tap-highlight-color: transparent;
 	outline: none;
 	background-color: #130912;
+	overflow-x: hidden !important;
 }
 
 ::-webkit-scrollbar {
