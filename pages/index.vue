@@ -19,32 +19,11 @@ const navloader = ref<boolean>(false);
 // });
 </script>
 <template>
-	<section class="w-full flex flex-col gap-y-4 pb-8">
-		<nav class="grid grid-cols-3 gap-x-2 w-full px-20 py-4 sticky top-0 bg-tate border-b border-neutral-800">
-			<ul class="links flex flex-row items-center gap-x-8">
-				<li>home</li>
-				<li>Skills</li>
-				<li>Projects</li>
-			</ul>
-			<div class="flex flex-col gap-y-2 items-center justify-center">
-				<img src="@/assets/Img/favicon-32x32.png" alt="" class="rounded-md w-10 h-10" />
-				<span class="font-light text-xs tracking-wide text-center uppercase"
-					>Amos <br />
-					Kipyegon</span
-				>
-			</div>
-			<div class="flex flex-row gap-x-8 items-center justify-end">
-				<div class="w-5 h-5 text-gray-400 hover:text-gray-50 cursor-pointer transition-colors duration-200">
-					<IconsTwitter />
-				</div>
-				<div class="w-5 h-5 text-gray-400 hover:text-gray-50 cursor-pointer transition-colors duration-200">
-					<IconsLinkedin />
-				</div>
-				<div class="w-5 h-5 text-gray-400 hover:text-gray-50 cursor-pointer transition-colors duration-200">
-					<IconsGithub />
-				</div>
-			</div>
-		</nav>
+	<section class="w-full flex flex-col gap-y-4">
+		<!-- Navbar Content -->
+		<Navbar />
+
+		<!-- Hero -->
 		<header class="w-full flex flex-col gap-y-3 justify-center items-center pt-8 px-20 font-serif">
 			<h3 class="text-6xl tracking-wide">Amos Kipyegon</h3>
 			<h3 class="text-4xl capitalize tracking-wide text-center">Full-stack Developer <br />based in kenya</h3>
@@ -105,29 +84,26 @@ const navloader = ref<boolean>(false);
 				</div>
 			</div>
 		</div>
-		<div id="skills" class="py-12 flex flex-col gap-y-10 items-center justify-center w-full px-20">
+
+		<!-- Skills -->
+		<div id="skills" class="py-12 flex flex-col gap-y-5 sm:gap-y-10 items-center justify-center w-full px-4 sm:px-20">
 			<div class="title w-full flex items-center justify-center py-8 border-t border-neutral-800">
-				<h2 class="text-4xl tracking-wider font-light uppercase">My <span class="text-super">Skills</span></h2>
+				<h2 class="text-xl sm:text-4xl tracking-wider font-light uppercase">My <span class="text-super">Skills</span></h2>
 			</div>
-			<div class="w-full grid grid-cols-3 gap-x-4">
-				<div id="skill-card" class="card-tate flex flex-col gap-y-2 rounded-md px-2 py-3 shadow-md">
-					<div class="icon w-full flex items-center justify-center py-3">
-						<img src="~/assets/components/Icons/backend.png" alt="" class="" />
-					</div>
-					<article class="w-full flex flex-col gap-y-2 px-2">
-						<p class="text-sm leading-6 tracking-wide break-words">
-							As a backend developer, I have a strong skill set in building RESTful APIs and implementing authentication
-							modules. I have experience working with GraphQL to create efficient data APIs, and have a solid foundation in
-							using a variety of tools and frameworks for development work.
-						</p>
-						<p class="text-sm leading-6 tracking-wide break-words">
-							You are skilled in using Django and Python for building web applications, and have also utilized Springboot for
-							creating standalone Java-based applications.
-						</p>
-					</article>
-				</div>
-			</div>
+			<Skills />
 		</div>
+
+		<!-- Experience -->
+
+		<div id="experience" class="py-12 flex flex-col gap-y-5 sm:gap-y-10 items-center justify-center w-full px-4 sm:px-20">
+			<div class="title w-full flex items-center justify-center py-8 border-t border-neutral-800">
+				<h2 class="text-xl sm:text-4xl tracking-wider font-light uppercase">
+					Education & <span class="text-super"> Experience</span>
+				</h2>
+			</div>
+			<Experience />
+		</div>
+		<Footer />
 	</section>
 	<!-- <section class="w-full flex flex-col gap-y-2">
 		<div
@@ -163,9 +139,6 @@ const navloader = ref<boolean>(false);
 </template>
 
 <style scoped>
-.links li {
-	@apply text-base font-light tracking-wide capitalize hover:text-gray-50 cursor-pointer transition-colors duration-200;
-}
 .git::before {
 	content: "";
 	width: 1px;
