@@ -1,7 +1,9 @@
 <template>
-	<NuxtLayout>
-		<NuxtPage />
-	</NuxtLayout>
+	<main class="w-screen h-screen flex flex-col overflow-x-hidden">
+		<NuxtLayout>
+			<NuxtPage />
+		</NuxtLayout>
+	</main>
 </template>
 
 <style>
@@ -9,6 +11,7 @@ body {
 	line-height: 1.5;
 	font-family: "Mulish", Arial, sans-serif;
 	min-height: 100vh;
+	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	position: relative;
@@ -17,6 +20,8 @@ body {
 	outline: none;
 	background-color: #130912;
 	overflow-x: hidden !important;
+	padding: 0%;
+	margin: 0%;
 }
 
 ::-webkit-scrollbar {
