@@ -19,76 +19,23 @@ const navloader = ref<boolean>(false);
 // });
 </script>
 <template>
-	<section class="w-full flex flex-col gap-y-4">
+	<section class="w-full flex flex-col gap-y-0 sm:gap-y-4">
 		<!-- Navbar Content -->
 		<Navbar />
 
 		<!-- Hero -->
-		<header class="w-full flex flex-col gap-y-3 justify-center items-center pt-8 px-20 font-serif">
-			<h3 class="text-6xl tracking-wide">Amos Kipyegon</h3>
-			<h3 class="text-4xl capitalize tracking-wide text-center">Full-stack Developer <br />based in kenya</h3>
+		<header class="w-full flex flex-col gap-y-3 justify-center items-center pt-6 sm:pt-8 px-4 sm:px-20 font-serif">
+			<h3 class="text-5xl sm:text-6xl tracking-wide">Amos Kipyegon</h3>
+			<h3 class="text-3xl sm:text-4xl capitalize tracking-wide text-center">Full-stack Developer <br />based in kenya</h3>
 		</header>
-		<div id="hero" class="w-full pt-8 px-20 grid grid-cols-8 font-serif">
-			<div class="about col-span-2 grid grid-rows-3 gap-y-12">
-				<div class="h-card">
-					<div class="title">
-						<h4 class="text-base uppercase text-neutral-500">biography</h4>
-					</div>
-					<p class="text-lg">
-						I am a problem-solver at heart, and I enjoy the challenge of finding creative solutions to complex problems. I'm
-						Amos, a Full-Stack Developer working as a Freelancer.
-					</p>
-				</div>
-				<div class="h-card">
-					<div class="title">
-						<h4 class="text-base uppercase text-neutral-500">contact</h4>
-					</div>
-					<article class="flex flex-col gap-y-2">
-						<p class="text-lg tracking-wide">Nairobi, Kenya</p>
-						<p class="text-lg tracking-wide">amosk7793@gmail.com</p>
-						<p class="text-lg tracking-wide">+254 794 81 81 11</p>
-					</article>
-				</div>
-				<div class="h-card">
-					<div class="title">
-						<h4 class="text-base uppercase text-neutral-500">services</h4>
-					</div>
-					<article class="flex flex-col gap-y-2">
-						<p class="text-lg tracking-wide capitalize">Back-end development</p>
-						<p class="text-lg tracking-wide capitalize">Front-end development</p>
-						<p class="text-lg tracking-wide capitalize">Database design</p>
-					</article>
-				</div>
-			</div>
-			<div id="hero-img" class="col-span-4 flex justify-center items-center">
-				<img src="~/assets/Img/me.webp" alt="" class="max-h-[560px] rounded-3xl p-2 ring-1 ring-neutral-800" />
-			</div>
-			<div class="about col-span-2 grid grid-rows-3 gap-y-12">
-				<div class="h-card items-end">
-					<div class="title">
-						<h4 class="text-base uppercase text-neutral-500 text-end">years of <br />experience</h4>
-					</div>
-					<p class="text-5xl">2</p>
-				</div>
-				<div class="h-card items-end">
-					<div class="title">
-						<h4 class="text-base uppercase text-neutral-500 text-end">satisfication <br />clients</h4>
-					</div>
-					<p class="text-5xl">100%</p>
-				</div>
-				<div class="h-card items-end">
-					<div class="title">
-						<h4 class="text-base uppercase text-neutral-500 text-end">projects done</h4>
-					</div>
-					<p class="text-5xl">20+</p>
-				</div>
-			</div>
-		</div>
+
+		<!-- Hero Container -->
+		<Hero />
 
 		<!-- Skills -->
-		<div id="skills" class="py-12 flex flex-col gap-y-5 sm:gap-y-10 items-center justify-center w-full px-4 sm:px-20">
+		<div id="skills" class="py-4 sm:py-12 flex flex-col gap-y-5 sm:gap-y-10 items-center justify-center w-full px-4 sm:px-20">
 			<div class="title w-full flex items-center justify-center py-8 border-t border-neutral-800">
-				<h2 class="text-xl sm:text-4xl tracking-wider font-light uppercase">My <span class="text-super">Skills</span></h2>
+				<h2 class="text-3xl sm:text-4xl tracking-wider font-light uppercase">My <span class="text-super">Skills</span></h2>
 			</div>
 			<Skills />
 		</div>
@@ -146,9 +93,5 @@ const navloader = ref<boolean>(false);
 	position: absolute;
 	left: 0;
 	background-color: #484848;
-}
-
-.about .h-card {
-	@apply flex flex-col gap-y-4;
 }
 </style>
