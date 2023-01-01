@@ -18,7 +18,7 @@
 						sapiente?
 					</p>
 				</div>
-				<ul class="tools w-full flex flex-row gap-x-6 gap-y-2 items-center flex-wrap mt-1">
+				<ul class="tools w-full flex flex-row gap-x-4 sm:gap-x-6 gap-y-2 items-center flex-wrap mt-1">
 					<li>NuxtJS</li>
 					<li>Django</li>
 					<li>TailwindCSS</li>
@@ -63,7 +63,7 @@
 						sapiente?
 					</p>
 				</div>
-				<ul class="tools w-full flex flex-row gap-x-6 gap-y-2 items-center flex-wrap mt-1">
+				<ul class="tools w-full flex flex-row gap-x-4 sm:gap-x-6 gap-y-2 items-center flex-wrap mt-1">
 					<li>NuxtJS</li>
 					<li>TailwindCSS</li>
 				</ul>
@@ -98,7 +98,7 @@
 						sapiente?
 					</p>
 				</div>
-				<ul class="tools w-full flex flex-row gap-x-6 gap-y-2 items-center flex-wrap mt-1">
+				<ul class="tools w-full flex flex-row gap-x-4 sm:gap-x-6 gap-y-2 items-center flex-wrap mt-1">
 					<li>NuxtJS</li>
 					<li>Django</li>
 					<li>LeafLet JS</li>

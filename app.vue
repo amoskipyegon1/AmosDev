@@ -1,5 +1,5 @@
 <template>
-	<main class="">
+	<main class="w-screen h-screen flex flex-col">
 		<NuxtLayout>
 			<NuxtPage />
 		</NuxtLayout>
@@ -24,9 +24,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-	width: 4px;
-	height: 5px;
-	border-radius: 4px;
+	@apply w-[2px] sm:w-[4px] h-[5px] rounded-[4px];
 }
 
 ::-webkit-scrollbar-corner {
