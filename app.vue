@@ -1,5 +1,5 @@
 <template>
-	<main class="w-screen h-screen flex flex-col overflow-x-hidden">
+	<main class="w-screen h-screen flex flex-col">
 		<NuxtLayout>
 			<NuxtPage />
 		</NuxtLayout>
@@ -7,27 +7,24 @@
 </template>
 
 <style>
+html,
 body {
-	line-height: 1.5;
+	overflow-x: hidden;
+}
+body {
+	/* line-height: 1.5; */
 	font-family: "Mulish", Arial, sans-serif;
-	min-height: 100vh;
-	width: 100vw;
-	display: flex;
-	flex-direction: column;
-	position: relative;
 	box-sizing: border-box;
 	-webkit-tap-highlight-color: transparent;
 	outline: none;
 	background-color: #130912;
-	overflow-x: hidden !important;
-	padding: 0%;
-	margin: 0%;
+	padding: 0;
+	margin: 0;
+	width: 100%;
 }
 
 ::-webkit-scrollbar {
-	width: 4px;
-	height: 5px;
-	border-radius: 32px;
+	@apply w-[2px] sm:w-[4px] h-[5px] rounded-[4px];
 }
 
 ::-webkit-scrollbar-corner {
@@ -36,7 +33,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
 	background-color: #ff0039;
-	border-radius: 32px;
+	border-radius: 4px;
 }
 ::-webkit-scrollbar-track {
 	background-color: #f9fbff;
