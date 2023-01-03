@@ -29,10 +29,12 @@ onMounted(() => {
             Currently, I'm open to opportunities and doing collaborations; my inbox is always open. Whether you have a question or just want
             to say hi, I'll try my best to get back to you!
         </p>
-        <button
+        <NuxtLink
+            to="mailto:amosk7793@gmail.com"
+            target="_blank"
             class="card-tate my-2 sm:my-4 px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg font-serif tracking-wide rounded hover:shadow-xl"
         >
             Say Hello
-        </button>
+        </NuxtLink>
     </div>
 </template>

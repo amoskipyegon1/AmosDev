@@ -17,7 +17,7 @@ useHead({
                             of developer you trust with a project from start to finish. Great services & Recommended!”
                         </p>
                         <div class="w-full flex flex-col items-center justify-center gap-y-2">
-                            <h4 class="text-base sm:text-xl font-semibold">Jurgen Klopp</h4>
+                            <h4 class="text-base sm:text-xl font-semibold">Cherrie Mooncakes</h4>
                             <small class="text-xs text-neutral-400">Client at <span class="text-super">Freelancer</span></small>
                         </div>
                     </div>
@@ -30,7 +30,7 @@ useHead({
                             of developer you trust with a project from start to finish. Great services & Recommended!”
                         </p>
                         <div class="w-full flex flex-col items-center justify-center gap-y-2">
-                            <h4 class="text-base sm:text-xl font-semibold">Jurgen Klopp</h4>
+                            <h4 class="text-base sm:text-xl font-semibold">Cherrie Mooncakes</h4>
                             <small class="text-xs text-neutral-400">Client at <span class="text-super">Freelancer</span></small>
                         </div>
                     </div>
@@ -43,7 +43,7 @@ useHead({
                             of developer you trust with a project from start to finish. Great services & Recommended!”
                         </p>
                         <div class="w-full flex flex-col items-center justify-center gap-y-2">
-                            <h4 class="text-base sm:text-xl font-semibold">Jurgen Klopp</h4>
+                            <h4 class="text-base sm:text-xl font-semibold">Cherrie Mooncakes</h4>
                             <small class="text-xs text-neutral-400">Client at <span class="text-super">Freelancer</span></small>
                         </div>
                     </div>

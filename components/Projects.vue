@@ -75,9 +75,8 @@ onMounted(() => {
                 </div>
                 <div class="card-tate rounded-sm px-1 sm:px-2 py-2 sm:py-3 shadow-lg">
                     <p class="text-xs sm:text-sm">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam inventore voluptatem iusto libero deserunt,
-                        repudiandae dicta porro delectus rem dolor nemo blanditiis aspernatur autem. Sint nam odit perspiciatis numquam
-                        sapiente?
+                        This is an exploration of building an e-commerce website with full-stack features. It allows users to buy or sell
+                        their products on the same site.
                     </p>
                 </div>
                 <ul class="tools w-full flex flex-row gap-x-4 sm:gap-x-6 gap-y-2 items-center flex-wrap mt-1">
@@ -95,14 +94,16 @@ onMounted(() => {
                         </div>
                         <span class="text-xs sm:text-sm tracking-wide">Preview</span>
                     </button>
-                    <button
+                    <NuxtLink
+                        to="https://github.com/Amos-Ditto/Custom-Ecommerce-Application"
+                        target="_blank"
                         class="flex flex-row items-center gap-x-2 px-3 sm:px-4 py-2 rounded ring-1 ring-neutral-800 text-gray-300 hover:text-gray-50 transition-colors duration-200"
                     >
                         <div class="w-4 h-4">
                             <IconsGithub />
                         </div>
                         <span class="text-xs sm:text-sm tracking-wide">Github repo</span>
-                    </button>
+                    </NuxtLink>
                 </div>
             </div>
         </div>
@@ -124,9 +125,8 @@ onMounted(() => {
                 </div>
                 <div class="card-tate rounded-sm px-1 sm:px-2 py-2 sm:py-3 shadow-lg">
                     <p class="text-xs sm:text-sm">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam inventore voluptatem iusto libero deserunt,
-                        repudiandae dicta porro delectus rem dolor nemo blanditiis aspernatur autem. Sint nam odit perspiciatis numquam
-                        sapiente?
+                        This project was for showcasing and keeping track of my progress and skills.It also helped me to practice creating a
+                        visually appealing landing pages.
                     </p>
                 </div>
                 <ul class="tools w-full flex flex-row gap-x-4 sm:gap-x-6 gap-y-2 items-center flex-wrap mt-1">
@@ -134,14 +134,16 @@ onMounted(() => {
                     <li>TailwindCSS</li>
                 </ul>
                 <div class="w-full flex flex-row items-center gap-x-4 mt-3">
-                    <button
+                    <NuxtLink
+                        to="https://github.com/Amos-Ditto/AmosDev"
+                        target="_blank"
                         class="flex flex-row items-center gap-x-2 px-3 sm:px-4 py-2 rounded ring-1 ring-neutral-800 text-gray-300 hover:text-gray-50 transition-colors duration-200"
                     >
                         <div class="w-4 h-4">
                             <IconsGithub />
                         </div>
                         <span class="text-xs sm:text-sm tracking-wide">Github repo</span>
-                    </button>
+                    </NuxtLink>
                 </div>
             </div>
         </div>
@@ -159,13 +161,12 @@ onMounted(() => {
                     <small class="text-xs sm:text-sm font-light capitalize text-neutral-500 tracking-wider font-sans"
                         >featured project</small
                     >
-                    <h3 class="text-lg sm:text-xl tracking-wide capitalize">This site</h3>
+                    <h3 class="text-lg sm:text-xl tracking-wide capitalize">Logistics App</h3>
                 </div>
                 <div class="card-tate rounded-sm px-1 sm:px-2 py-2 sm:py-3 shadow-lg">
                     <p class="text-xs sm:text-sm">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam inventore voluptatem iusto libero deserunt,
-                        repudiandae dicta porro delectus rem dolor nemo blanditiis aspernatur autem. Sint nam odit perspiciatis numquam
-                        sapiente?
+                        This is a transportation and delivery app aiming to solve the common small and medium scale business face when
+                        delivering goods to their online clients.
                     </p>
                 </div>
                 <ul class="tools w-full flex flex-row gap-x-4 sm:gap-x-6 gap-y-2 items-center flex-wrap mt-1">
@@ -175,14 +176,16 @@ onMounted(() => {
                     <li>TailwindCSS</li>
                 </ul>
                 <div class="w-full flex flex-row items-center gap-x-4 mt-3">
-                    <button
+                    <NuxtLink
+                        to="https://github.com/Amos-Ditto/Logistics-App"
+                        target="_blank"
                         class="flex flex-row items-center gap-x-2 px-3 sm:px-4 py-2 rounded ring-1 ring-neutral-800 text-gray-300 hover:text-gray-50 transition-colors duration-200"
                     >
                         <div class="w-4 h-4">
                             <IconsGithub />
                         </div>
                         <span class="text-xs sm:text-sm tracking-wide">Github repo</span>
-                    </button>
+                    </NuxtLink>
                 </div>
             </div>
         </div>
