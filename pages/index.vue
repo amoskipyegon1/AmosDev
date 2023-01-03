@@ -20,21 +20,27 @@ onMounted(() => {
     );
 
     itemObs.observe(navref.value as Element);
+
+    document.addEventListener('scroll', handleScroll);
 });
 
 const ScrollFunction = (payload: string): void => {
     if (payload === 'header') {
-        navref.value?.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+        navref.value?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
     } else if (payload === 'skills') {
-        skills.value?.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+        skills.value?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
     } else if (payload === 'experience') {
-        experience.value?.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+        experience.value?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
     } else if (payload === 'projects') {
-        projects.value?.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+        projects.value?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
     } else {
         return;
     }
 };
+
+function handleScroll(): void {
+    console.log(window.scrollY);
+}
 </script>
 <template>
     <section class="w-full flex flex-col gap-y-0 md:gap-y-4">
@@ -112,6 +118,13 @@ const ScrollFunction = (payload: string): void => {
 
         <!-- Footer -->
         <Footer />
+
+        <!-- Mobile Navbar -->
+        <div
+            class="w-full sm:hidden flex flex-row flex-wrap gap-x-2 fixed bottom-0 py-3 px-8 bg-tate z-50 border-neutral-800 border-t shadow-lg"
+        >
+            <MobileNav @ScrollFunction="ScrollFunction" />
+        </div>
     </section>
 </template>
 
