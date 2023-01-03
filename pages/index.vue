@@ -3,8 +3,10 @@ const navref = ref<HTMLDivElement>();
 const skills = ref<HTMLDivElement>();
 const experience = ref<HTMLDivElement>();
 const projects = ref<HTMLDivElement>();
+const mobilenav = ref<HTMLDivElement>();
 
 const navloader = ref<boolean>(false);
+const mobilenavloader = ref<boolean>(false);
 
 onMounted(() => {
     const itemObs = new IntersectionObserver(
@@ -21,7 +23,19 @@ onMounted(() => {
 
     itemObs.observe(navref.value as Element);
 
-    document.addEventListener('scroll', handleScroll);
+    const mobileNavObs = new IntersectionObserver(
+        (entry) => {
+            if (entry[0].isIntersecting) {
+                mobilenavloader.value = true;
+                mobileNavObs.unobserve(entry[0].target);
+            }
+        },
+        {
+            threshold: 0,
+        }
+    );
+
+    mobileNavObs.observe(mobilenav.value as Element);
 });
 
 const ScrollFunction = (payload: string): void => {
@@ -37,10 +51,6 @@ const ScrollFunction = (payload: string): void => {
         return;
     }
 };
-
-function handleScroll(): void {
-    console.log(window.scrollY);
-}
 </script>
 <template>
     <section class="w-full flex flex-col gap-y-0 md:gap-y-4">
@@ -121,7 +131,9 @@ function handleScroll(): void {
 
         <!-- Mobile Navbar -->
         <div
-            class="w-full sm:hidden flex flex-row flex-wrap gap-x-2 fixed bottom-0 py-3 px-8 bg-tate z-50 border-neutral-800 border-t shadow-lg"
+            ref="mobilenav"
+            class="w-full sm:hidden flex flex-row flex-wrap gap-x-2 fixed bottom-0 py-3 px-8 bg-tate z-50 border-neutral-800 border-t shadow-lg transition duration-[2s]"
+            :class="mobilenavloader ? 'opacity-1 translate-y-0' : 'opacity-0 translate-y-full'"
         >
             <MobileNav @ScrollFunction="ScrollFunction" />
         </div>
