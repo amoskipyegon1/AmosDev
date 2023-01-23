@@ -64,7 +64,7 @@ const ScrollFunction = (payload: string): void => {
             :class="navloader ? 'opacity-1 translate-y-0' : 'opacity-0 translate-y-1/4'"
         >
             <div class="flex sm:hidden items-center justify-center w-[96px] h-[96px]">
-                <img src="~/assets/Img/pic.png" alt="" class="rounded-full h-full w-full ring-2 ring-neutral-700" />
+                <img src="~/assets/Img/pic.webp" alt="" class="rounded-full h-full w-full ring-2 ring-neutral-700" />
             </div>
             <h3 class="text-4xl sm:text-6xl tracking-wide">Amos Kipyegon</h3>
             <h3 class="text-xl sm:text-4xl capitalize tracking-wide text-center">Full-stack Developer <br />based in kenya</h3>
