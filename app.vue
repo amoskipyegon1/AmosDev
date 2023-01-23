@@ -21,6 +21,7 @@ body {
     padding: 0;
     margin: 0;
     width: 100%;
+    /* @apply bg-[#111318]; */
 }
 
 ::-webkit-scrollbar {
