@@ -1,5 +1,6 @@
 <template>
-    <main class="w-full h-full flex flex-col bg-tate text-slate-300">
-        <slot></slot>
+    <main class="w-full flex flex-col gap-y-2">
+        <Navbar />
+        <slot />
     </main>
 </template>

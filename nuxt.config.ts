@@ -1,13 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    css: ['~/assets/css/tailwind.css'],
-    modules: ['@nuxtjs/tailwindcss'],
+    css: ['~/assets/css/tailwind.css', '~/assets/css/global.css'],
+    modules: ['@nuxtjs/tailwindcss',"@nuxt/image-edge", 'nuxt-icon'],
     app: {
-        head: {
-            charset: 'utf-16',
-            title: 'Amos Dev',
-            meta: [{ name: 'description', content: 'Trying to showcase my programming skills.' }],
-        },
         pageTransition: { name: 'page', mode: 'out-in' },
     },
-});
+})

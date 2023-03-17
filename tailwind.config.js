@@ -1,7 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-
-const colors = require('tailwindcss/colors');
-
 module.exports = {
     content: [
         './components/**/*.{js,vue,ts}',
@@ -9,26 +6,17 @@ module.exports = {
         './pages/**/*.vue',
         './plugins/**/*.{js,ts}',
         './nuxt.config.{js,ts}',
-        './node_modules/flowbite/**/*.js',
     ],
     theme: {
         extend: {
             colors: {
-                dark: 'rgb(12 12 13 / 1)',
-                tate: '#130912',
-                tomato: 'tomato',
-                super: '#e74142',
+                'deep-color': '#1A237E',
+            },
+            transitionProperty: {
+                length: 'height, width',
+                spacing: 'margin, padding',
             },
         },
-        screens: {
-            xs: '400px',
-            sm: '640px',
-            md: '768px',
-            lg: '1024px',
-            xl: '1280px',
-            '2xl': '1536px',
-        },
     },
-    darkMode: 'class',
-    plugins: [require('@tailwindcss/line-clamp'), require('flowbite/plugin')],
-};
+    plugins: [require('@tailwindcss/line-clamp')],
+}

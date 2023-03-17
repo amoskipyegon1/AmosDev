@@ -1,42 +1,24 @@
+<script setup lang="ts">
+useHead({
+    title: 'Amos Kipyegon - Dev',
+    meta: [{ name: 'description', content: 'Showcases of my dev skills and what I can offer.' }],
+    link: [
+        { href: 'https://fonts.googleapis.com', rel: 'preconnect' },
+        { href: 'https://fonts.gstatic.com', rel: 'preconnect' },
+        {
+            href: 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap',
+            rel: 'stylesheet',
+        },
+    ],
+})
+if (process.client) {
+    await new Promise((resolve) => setTimeout(resolve, 2000))
+}
+</script>
 <template>
-    <main class="w-screen h-screen flex flex-col">
+    <div class="w-full flex flex-col">
         <NuxtLayout>
             <NuxtPage />
         </NuxtLayout>
-    </main>
+    </div>
 </template>
-
-<style>
-html,
-body {
-    overflow-x: hidden;
-}
-body {
-    /* line-height: 1.5; */
-    font-family: 'Mulish', Arial, sans-serif;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-    outline: none;
-    background-color: #130912;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    /* @apply bg-[#111318]; */
-}
-
-::-webkit-scrollbar {
-    @apply w-[2px] sm:w-[4px] h-[5px] rounded-[4px];
-}
-
-::-webkit-scrollbar-corner {
-    background-color: #f9fbff;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #ff0039;
-    border-radius: 4px;
-}
-::-webkit-scrollbar-track {
-    background-color: #f9fbff;
-}
-</style>
