@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .container {
+    width: 100%;
+    @media (min-width: 540px) {
+        max-width: 540px;
+    }
+    @media (min-width: 720px) {
+        max-width: 720px;
+    }
+    @media (min-width: 960px) {
+        max-width: 960px;
+    }
+    @media (min-width: 1140px) {
+        max-width: 1140px;
+    }
+}
+}
