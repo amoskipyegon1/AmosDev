@@ -22,7 +22,4 @@
             </div>
         </div>
     </div>
-    <!-- I enjoy building solid
-    and user-friendly web applications using my experience in interface design, TypeScript and
-    VueJS. Also optimized backends and database models, Django, NodeJS and RestApi/GraphQL. -->
 </template>
