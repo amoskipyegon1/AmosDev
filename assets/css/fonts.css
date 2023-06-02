@@ -1,0 +1,51 @@
+@font-face {
+  font-display: swap;
+  font-family: 'IBMPlexMono';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/IBMPlexMono-Regular.woff2) format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'IBMPlexMono';
+  font-style: normal;
+  font-weight: 500;
+  src: url(/fonts/IBMPlexMono-Medium.woff2) format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'IBMPlexMono';
+  font-style: normal;
+  font-weight: 600;
+  src: url(/fonts/IBMPlexMono-SemiBold.woff2) format('woff2');
+}
+
+/*  */
+@font-face {
+  font-display: swap;
+  font-family: 'Freight Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url(/fonts/freight-sans-light.woff2) format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Freight Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url(/fonts/freight-sans-medium.woff2) format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Freight Sans';
+  font-style: italic;
+  font-weight: 500;
+  src: url(/fonts/freight-sans-medium-italic.woff2) format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Freight Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: url(/fonts/freight-sans-bold.woff2) format('woff2');
+}

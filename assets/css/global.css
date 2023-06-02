@@ -1,0 +1,33 @@
+html {
+	font-family: "Freight Sans", "Inter", sans-serif;
+	font-size: 15px;
+	tab-size: 4;
+	font-feature-settings: normal;
+	line-height: 1.5;
+	-webkit-text-size-adjust: 100%;
+}
+body {
+	overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-font-smoothing: antialiased;
+}
+html,
+body {
+	margin: 0%;
+	padding: 0%;
+	box-sizing: border-box;
+	@apply bg-app-dark text-[#ffffff] dark:bg-[#FFFBF3] dark:text-deep-color;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+	transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+	background-color: transparent !important;
+}
+
+html:not(.enable-pinch-to-zoom) body {
+  /* Prevent arbitrary zooming on mobile devices */
+  touch-action: pan-x pan-y;
+}

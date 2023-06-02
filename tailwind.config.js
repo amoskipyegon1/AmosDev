@@ -1,34 +1,26 @@
 /** @type {import('tailwindcss').Config} */
-
-const colors = require('tailwindcss/colors');
-
 module.exports = {
-    content: [
-        './components/**/*.{js,vue,ts}',
-        './layouts/**/*.vue',
-        './pages/**/*.vue',
-        './plugins/**/*.{js,ts}',
-        './nuxt.config.{js,ts}',
-        './node_modules/flowbite/**/*.js',
-    ],
+    content: ['./components/**/*.{js,vue,ts}', './layouts/**/*.vue', './pages/**/*.vue', './plugins/**/*.{js,ts}', './nuxt.config.{js,ts}'],
     theme: {
         extend: {
             colors: {
-                dark: 'rgb(12 12 13 / 1)',
-                tate: '#130912',
-                tomato: 'tomato',
-                super: '#e74142',
+                'deep-color': '#1A237E',
+                'app-purple': '#29233f',
+                'app-dark': '#171c23',
+                'app-dark-blue': '#05192d',
+                'app-gold': 'rgb(251 191 36)',
+            },
+            transitionProperty: {
+                length: 'height, width',
+                spacing: 'margin, padding',
+            },
+            backgroundSize: {
+                100: '100% 100%',
+            },
+            fontFamily: {
+                plexmono: ['IBMPlexMono', 'Inter', 'sans-serif'],
+                freight: ['Freight Sans', 'Inter', 'sans-serif'],
             },
         },
-        screens: {
-            xs: '400px',
-            sm: '640px',
-            md: '768px',
-            lg: '1024px',
-            xl: '1280px',
-            '2xl': '1536px',
-        },
     },
-    darkMode: 'class',
-    plugins: [require('@tailwindcss/line-clamp'), require('flowbite/plugin')],
 };

@@ -1,5 +1,10 @@
 <template>
-    <main class="w-full h-full flex flex-col bg-tate text-slate-300">
-        <slot></slot>
+    <main class="w-full flex flex-col">
+        <header class="w-full bg-app-purple">
+            <Navbar></Navbar>
+        </header>
+        <section class="w-full">
+            <slot />
+        </section>
     </main>
 </template>

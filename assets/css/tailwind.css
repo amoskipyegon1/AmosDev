@@ -3,11 +3,19 @@
 @tailwind utilities;
 
 @layer components {
-	.card-tate {
-		background: rgba(255, 255, 255, 0.05);
-		border: 1px solid rgba(255, 255, 255, 0.025);
-	}
-	.tate-color {
-		background: linear-gradient(to bottom, #e74142, #e84041);
-	}
+    .container {
+    width: 100%;
+    @media (min-width: 540px) {
+        max-width: 540px;
+    }
+    @media (min-width: 720px) {
+        max-width: 720px;
+    }
+    @media (min-width: 960px) {
+        max-width: 960px;
+    }
+    @media (min-width: 1140px) {
+        max-width: 1140px;
+    }
+}
 }
