@@ -6,9 +6,9 @@
                     <IconsMenu class="text-stone-200" />
                 </button>
             </div>
-            <div class="flex flex-row items-center gap-x-10 justify-center md:justify-start">
+            <div class="flex flex-row items-center gap-x-8 justify-center md:justify-start">
                 <div class="flex flex-row items-center font-plexmono">
-                    <NuxtImg src="/imgs/logo.webp" class="rounded w-10 md:w-8 h-10 md:h-8" />
+                    <NuxtImg src="/imgs/logo.webp" class="rounded w-10 h-10" />
                 </div>
                 <div class="hidden md:flex gap-x-1.5 items-center">
                     <HeadersButtonLink name="Home" />
